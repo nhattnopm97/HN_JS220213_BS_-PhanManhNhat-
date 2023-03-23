@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <!-- Bài 3 : Viết một chương trình xóa các phần tử trùng của một mảng và in ra kết quả.[20 điểm]
+● Đầu vào: 1 mảng bất kỳ
+● Đầu ra: Mảng mới với các ký tự (hoặc số) không trùng nhau
+● Ví dụ -->
+
+    <script>
+        let arr=[1,2,3,4,5,6,7,3,3,4,5,5,5,6,7];
+        
+        function rmDlc(arr) {
+            let result = [];
+            for (let i = 0; i < arr.length; i++) {
+              if (!result.includes(arr[i])) {
+                result.push(arr[i]);
+              }
+            }
+            return result;
+          }
+          let a = rmDlc(arr);
+          console.log(a);
+    </script>
+</body>
+
+</html>

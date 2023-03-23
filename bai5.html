@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <!-- Bài 5 : Tạo một mảng gồm 3 nhân viên Rikkei Academy (tên nhân viên). Xây dựng chương
+trình quản lý nhân viên với các chức năng (Read, Create, Update, Delete). [30 điểm]
+Lưu ý: Chỉ tính điểm khi hoàn thiện các yêu cầu -->
+
+        <script>
+            let arr=
+            [
+            {name:"Quang",age:"50",que:"Hà Nội"},
+            {name:"Hai",age:"28",que:"Thanh Hóa"},
+            {name:"Nhung",age:"20",que:"Thái Bình"}
+            ];
+
+            //C:creat
+            let pTCVan ={
+                name:"Van",
+                age:"30",
+                que:"Quảng Ninh"
+            }
+            let nHMDuong = {
+                name:"Dương",
+                age:"21",
+                que:"Hà Nội"
+            }
+            arr.push(pTCVan);
+            arr.unshift(nHMDuong);
+            console.log("111111",arr);
+
+            //R:read;
+            console.log(arr);
+            console.log(arr[1]);
+            console.log(arr[1].name);
+            console.log(arr[1].age);
+            console.log(arr[1].que);
+
+            //U:update
+            arr[2].name = "Hồng Nhung";
+            console.log("22222222",arr);
+
+            //D: delete
+            arr.splice([0],1);
+            console.log("333333333",arr);
+            
+        </script>
+
+</body>
+
+</html>

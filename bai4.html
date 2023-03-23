@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+
+<body>
+    <!-- Bài 4 : Viết một chương sắp xếp các phần tử là số ở trong mảng theo thứ tự tăng dần.
+[20 điểm]
+● Đầu vào: 1 mảng bất kỳ
+● Đầu ra: Mảng mới với số đã được sắp xếp theo thứ tự tăng dần
+● Ví dụ
+○ Cho Arr=[5, 2, 3, 4, 1]; In ra Arr=[1,2,3,4,5]
+● Lưu ý: Không dùng hàm sort() -->
+
+    <script>
+
+        let arr = [9, 8, 7, 3, 4, 5, 2, 1, 6, 15, 20, 99];
+
+        function sort(arr) {
+            for (let i = 1; i < arr.length; i++) {
+                let a = arr[i];
+                let j = i - 1;
+                while (j >= 0 && arr[j] > a) {
+                    arr[j + 1] = arr[j];
+                    j = j - 1;
+                }
+                arr[j + 1] = a;
+            }
+            return arr;
+        }
+        
+        let sArr = sort(arr);
+        console.log(sArr);
+
+    </script>
+</body>
+
+</html>
